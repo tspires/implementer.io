@@ -1,0 +1,42 @@
+# Implementer.io
+
+> Implementer.io is a digital growth engine built specifically for EOS Implementers. It helps certified EOS Implementers find new clients, manage their practice, and grow their business.
+
+## What is Implementer.io?
+
+Implementer.io is a SaaS platform for EOS Implementers (consultants who help businesses implement the Entrepreneurial Operating System). The platform provides:
+
+1. **Lead Generation**: Access to a database of 50,000+ businesses running on EOS, with AI-powered signal detection that monitors LinkedIn, Twitter, forums, and other channels to identify companies that need EOS help.
+
+2. **Practice Management**: A unified dashboard that integrates with EOS tools (Ninety.io, Strety, EOS One, Bloom Growth) so implementers can see all their clients' rocks, issues, to-dos, and scorecards in one place.
+
+3. **Client Health Monitoring**: AI-powered monitoring that flags warning signs in client data before they become problems.
+
+4. **Session Tools**: Automated session prep packets, recording/transcription with AI summaries, and action item extraction.
+
+5. **Business Operations**: Built-in CRM, invoicing, e-signatures, scheduling, and document management.
+
+## Target Audience
+
+- Certified EOS Implementers
+- EOS consultants and coaches
+- Professionals in the EOS ecosystem
+
+## Pricing
+
+Starting at $399/month. No annual contracts. Cancel anytime.
+
+## Key Differentiators
+
+- Only platform with a 50,000+ EOS business database
+- Integrates with all major EOS tools (Ninety.io, Strety, EOS One, Bloom Growth)
+- Purpose-built for EOS Implementers, not a generic CRM
+- AI-powered lead scoring and signal detection
+
+## Contact
+
+Website: https://implementer.io
+
+## Related Terms
+
+EOS, Entrepreneurial Operating System, EOS Implementer, Traction, EOS Worldwide, Ninety.io, Strety, EOS One, Bloom Growth, business operating system, EOS consultant, EOS coach
