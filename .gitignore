@@ -1,0 +1,23 @@
+# Server
+.server.pid
+
+# Image backups (from recolor script)
+*.backup.png
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor
+*.swp
+*.swo
+*~
+.idea/
+.vscode/
+
+# Node
+node_modules/
+
+# Environment variables
+.env
+server/.env
