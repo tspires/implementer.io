@@ -1,0 +1,616 @@
+<!doctype html>
+<html class="no-js" lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="A CRM built for EOS Implementers®. Manage contacts, deals, and client relationships with full EOS tool integration. See all your clients' data in one place.">
+        <meta name="author" content="Implementer.io">
+        <meta name="keywords" content="EOS CRM, EOS Implementer CRM, client management, Ninety.io integration, Strety integration, EOS practice management">
+        <meta name="robots" content="index, follow">
+        <link rel="canonical" href="https://implementer.io/crm">
+
+        <!-- Open Graph -->
+        <meta property="og:title" content="Implementer.io | CRM for EOS Implementers®">
+        <meta property="og:description" content="A CRM built for how EOS Implementers® actually work. Manage contacts, deals, and client relationships with full EOS tool integration.">
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://implementer.io/crm">
+        <meta property="og:image" content="https://implementer.io/img/og-image.png">
+        <meta property="og:image:width" content="1200">
+        <meta property="og:image:height" content="630">
+
+        <!-- Twitter Card -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="Implementer.io | CRM for EOS Implementers®">
+        <meta name="twitter:description" content="A CRM built for how EOS Implementers® actually work. Manage contacts, deals, and client relationships with full EOS tool integration.">
+        <meta name="twitter:image" content="https://implementer.io/img/og-image.png">
+
+        <title>CRM for EOS Implementers® | Implementer.io</title>
+
+        <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
+
+        <!-- Preconnect for performance -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="css/fontawesome.min.css">
+        <link rel="stylesheet" href="css/themify-icons.css">
+        <link rel="stylesheet" href="css/elegant-font-icons.css">
+        <link rel="stylesheet" href="css/animate.min.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/slicknav.min.css">
+        <link rel="stylesheet" href="css/owl.carousel.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/custom.css">
+        <link rel="stylesheet" href="css/responsive.css">
+
+        <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+
+        <!-- Structured Data -->
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "SoftwareApplication",
+            "name": "Implementer.io CRM",
+            "applicationCategory": "BusinessApplication",
+            "operatingSystem": "Web",
+            "description": "A CRM built specifically for EOS Implementers®. Manage contacts, companies, deals, and client relationships with full integration to Ninety.io, Strety, EOS One, and Bloom Growth.",
+            "featureList": ["Contact Management", "Deal Pipeline", "EOS Tool Integration", "Activity Tracking", "Document Management"]
+        }
+        </script>
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+                {
+                    "@type": "Question",
+                    "name": "How is this different from Salesforce or HubSpot?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Generic CRMs require you to build custom integrations and workflows. Implementer.io CRM is pre-configured for EOS Implementers® with native integrations to Ninety.io, Strety, EOS One, and Bloom Growth. You see your clients' rocks, issues, and scorecards right in their contact record."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Can I import my existing contacts?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Yes. Import from CSV, or connect directly to your existing CRM. We'll deduplicate and enrich your contacts automatically."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Does it sync with my calendar?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Full two-way sync with Google Calendar and Outlook. Sessions, meetings, and follow-ups appear in both places automatically."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "How does the EOS tool integration work?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Connect your clients' Ninety.io, Strety, EOS One, or Bloom Growth accounts. Their rocks, issues, to-dos, and scorecard data flows into your CRM automatically. One dashboard, all your clients."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Can I track deals and revenue?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Full pipeline management with customizable stages. Track deal value, probability, and expected close dates. See your revenue forecast at a glance."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Is my data secure?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Your data is encrypted at rest and in transit. We never share client information between EOS Implementers®. SOC 2 compliance is in progress."
+                    }
+                }
+            ]
+        }
+        </script>
+    </head>
+    <body data-spy="scroll" data-target="#navmenu" data-offset="70">
+
+        <div class="site-preloader-wrap">
+            <div class="spinner"></div>
+        </div>
+
+        <!-- Navigation -->
+        <header id="header" class="header-section">
+            <div class="container">
+                <nav class="navbar">
+                    <a href="index.html" class="navbar-brand"><img src="img/logo-dark.png" alt="Implementer.io" class="navbar-logo"></a>
+                    <div class="d-flex menu-wrap">
+                       <div id="mainmenu" class="mainmenu">
+                           <ul class="nav">
+                               <li><a href="sales-automation.html">How It Works</a></li>
+                               <li><a href="crm.html">CRM</a></li>
+                               <li><a href="pricing.html">Pricing</a></li>
+                            </ul>
+                       </div>
+                        <div class="header-btn">
+                            <a href="#" class="default-btn open-modal">Get Early Access</a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </header>
+
+        <div class="header-height"></div>
+
+        <!-- Hero Section -->
+        <section class="hero-section d-flex align-items-center bg-grey bd-bottom hero-min-height">
+            <div class="container">
+                <div class="hero-wrap row align-items-center">
+                    <div class="col-lg-7 wow fadeInLeft">
+                        <div class="hero-content">
+                            <h1 class="hero-title">One CRM built for how EOS Implementers® actually work</h1>
+                            <p class="hero-subtitle mt-30 mb-20">Stop juggling spreadsheets and generic CRMs. Manage your contacts, deals, and client relationships with a CRM that understands EOS and integrates with the tools your clients already use.</p>
+                            <div class="mt-40">
+                                <a href="#" class="default-btn open-modal">Get Early Access</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 d-none d-lg-block wow fadeInRight">
+                        <div class="hero-item">
+                            <img src="img/undraw-deal.png" alt="CRM dashboard showing client contacts and deal pipeline for EOS Implementers®">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Problem Section -->
+        <section class="service-section section-2 padding bg-grey">
+            <div class="container">
+                <div class="section-heading text-center mb-40">
+                    <h2>Your current CRM wasn't built for this</h2>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4 col-sm-6 sm-padding wow fadeInUp">
+                        <div class="service-item">
+                            <i class="ti-layout-grid3-alt"></i>
+                            <h3>Scattered client data</h3>
+                            <p>Contact info in one place, session notes in another, client scorecards in a third. You waste time hunting for context before every meeting.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 sm-padding wow fadeInUp" data-wow-delay="200ms">
+                        <div class="service-item">
+                            <i class="ti-unlink"></i>
+                            <h3>No EOS context</h3>
+                            <p>Generic CRMs don't know what a V/TO is. They can't show you which clients are off track or which rocks are overdue. You're flying blind.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 sm-padding wow fadeInUp" data-wow-delay="400ms">
+                        <div class="service-item">
+                            <i class="ti-pencil-alt"></i>
+                            <h3>Manual data entry</h3>
+                            <p>Copying data between systems. Updating multiple tools after every session. Administrative work that adds no value to your clients.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Feature 1: Contact & Company Management -->
+        <section class="content-section bd-bottom padding">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 wow fadeInLeft">
+                        <div class="section-heading">
+                            <h4 class="sub-heading">CONTACTS & COMPANIES</h4>
+                            <h2>Every relationship in one place</h2>
+                        </div>
+                        <p class="mb-lg">Track contacts, companies, and the relationships between them. See the full history of every interaction, meeting, and document in a single timeline.</p>
+                        <ul class="content-list">
+                            <li><i class="fas fa-check"></i><span>Contact and company records with custom fields</span></li>
+                            <li><i class="fas fa-check"></i><span>Relationship mapping (who works where, who knows who)</span></li>
+                            <li><i class="fas fa-check"></i><span>Activity timeline with notes, emails, and meetings</span></li>
+                            <li><i class="fas fa-check"></i><span>Tags and segments for easy filtering</span></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-6 wow fadeInRight">
+                        <img src="img/undraw-connection.png" alt="Contact and company management interface" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Feature 2: Deal Pipeline -->
+        <section class="content-section bd-bottom padding bg-grey">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 order-lg-2 wow fadeInRight">
+                        <div class="section-heading">
+                            <h4 class="sub-heading">DEAL PIPELINE</h4>
+                            <h2>Track every opportunity from prospect to client</h2>
+                        </div>
+                        <p class="mb-lg">Visual pipeline management designed for how EOS Implementers® sell. Track discovery calls, proposals, and closes. Know exactly where every deal stands.</p>
+                        <ul class="content-list">
+                            <li><i class="fas fa-check"></i><span>Customizable pipeline stages</span></li>
+                            <li><i class="fas fa-check"></i><span>Deal value and probability tracking</span></li>
+                            <li><i class="fas fa-check"></i><span>Revenue forecasting</span></li>
+                            <li><i class="fas fa-check"></i><span>Win/loss analysis</span></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-6 order-lg-1 wow fadeInLeft">
+                        <img src="img/undraw-data.png" alt="Deal pipeline visualization" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Feature 3: Activity Tracking -->
+        <section class="content-section bd-bottom padding">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 wow fadeInLeft">
+                        <div class="section-heading">
+                            <h4 class="sub-heading">ACTIVITY TRACKING</h4>
+                            <h2>Never miss a follow-up</h2>
+                        </div>
+                        <p class="mb-lg">Log calls, emails, and meetings automatically. Set tasks and reminders. See your complete activity history with every contact.</p>
+                        <ul class="content-list">
+                            <li><i class="fas fa-check"></i><span>Automatic email logging</span></li>
+                            <li><i class="fas fa-check"></i><span>Call and meeting tracking</span></li>
+                            <li><i class="fas fa-check"></i><span>Task management with due dates</span></li>
+                            <li><i class="fas fa-check"></i><span>Calendar sync (Google, Outlook)</span></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-6 wow fadeInRight">
+                        <img src="img/undraw-emails.png" alt="Activity tracking and task management" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Feature 4: EOS Tool Integration -->
+        <section class="content-section bd-bottom padding bg-grey">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 order-lg-2 wow fadeInRight">
+                        <div class="section-heading">
+                            <h4 class="sub-heading">EOS TOOL INTEGRATION</h4>
+                            <h2>See all your clients' EOS data in one place</h2>
+                        </div>
+                        <p class="mb-lg">Connect to your clients' Ninety.io, Strety, EOS One, or Bloom Growth accounts. Their rocks, issues, to-dos, and scorecard data appears right in your CRM.</p>
+                        <ul class="content-list">
+                            <li><i class="fas fa-check"></i><span>Unified dashboard for all EOS tools</span></li>
+                            <li><i class="fas fa-check"></i><span>Real-time sync of rocks, issues, and to-dos</span></li>
+                            <li><i class="fas fa-check"></i><span>Scorecard data at a glance</span></li>
+                            <li><i class="fas fa-check"></i><span>Cross-client reporting and analytics</span></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-6 order-lg-1 wow fadeInLeft">
+                        <img src="img/undraw-server.png" alt="EOS tool integration dashboard" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Feature 5: Document Management -->
+        <section class="content-section bd-bottom padding">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 wow fadeInLeft">
+                        <div class="section-heading">
+                            <h4 class="sub-heading">DOCUMENT MANAGEMENT</h4>
+                            <h2>All your client files, organized and searchable</h2>
+                        </div>
+                        <p class="mb-lg">Store V/TOs, session notes, whiteboard photos, and contracts with each client record. Find any document instantly with full-text search.</p>
+                        <ul class="content-list">
+                            <li><i class="fas fa-check"></i><span>Unlimited document storage</span></li>
+                            <li><i class="fas fa-check"></i><span>Full-text search across all files</span></li>
+                            <li><i class="fas fa-check"></i><span>Version history</span></li>
+                            <li><i class="fas fa-check"></i><span>Secure sharing with clients</span></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-6 wow fadeInRight">
+                        <img src="img/undraw-growth.png" alt="Document management and file organization" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Integration Logos -->
+        <section class="sponsor-section padding">
+            <div class="container">
+                <div class="section-heading text-center mb-40">
+                    <h2>Integrates with the tools your clients use</h2>
+                </div>
+                <div class="sponsor-carousel">
+                    <div class="sponsor-item">
+                        <img src="img/ninety-logo.png" alt="Ninety.io">
+                    </div>
+                    <div class="sponsor-item">
+                        <img src="img/strety-logo.png" alt="Strety">
+                    </div>
+                    <div class="sponsor-item">
+                        <img src="img/eosone-logo.png" alt="EOS One">
+                    </div>
+                    <div class="sponsor-item">
+                        <img src="img/bloom-logo.png" alt="Bloom Growth">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="content-section padding bg-grey">
+            <div class="container">
+                <div class="section-heading text-center mb-40">
+                    <h2>Questions about the CRM?</h2>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="accordion" id="faqAccordion">
+                            <div class="card faq-card mb-3">
+                                <div class="card-header" data-toggle="collapse" data-target="#faq1">
+                                    <h5 class="mb-0">How is this different from Salesforce or HubSpot?</h5>
+                                </div>
+                                <div id="faq1" class="collapse show" data-parent="#faqAccordion">
+                                    <div class="card-body">
+                                        Generic CRMs require you to build custom integrations and workflows. <strong class="brand-name">Implementer<span class="accent">.io</span></strong> CRM is pre-configured for EOS Implementers® with native integrations to Ninety.io, Strety, EOS One, and Bloom Growth. You see your clients' rocks, issues, and scorecards right in their contact record.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card faq-card mb-3">
+                                <div class="card-header" data-toggle="collapse" data-target="#faq2">
+                                    <h5 class="mb-0">Can I import my existing contacts?</h5>
+                                </div>
+                                <div id="faq2" class="collapse" data-parent="#faqAccordion">
+                                    <div class="card-body">
+                                        Yes. Import from CSV, or connect directly to your existing CRM. We'll deduplicate and enrich your contacts automatically.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card faq-card mb-3">
+                                <div class="card-header" data-toggle="collapse" data-target="#faq3">
+                                    <h5 class="mb-0">Does it sync with my calendar?</h5>
+                                </div>
+                                <div id="faq3" class="collapse" data-parent="#faqAccordion">
+                                    <div class="card-body">
+                                        Full two-way sync with Google Calendar and Outlook. Sessions, meetings, and follow-ups appear in both places automatically.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card faq-card mb-3">
+                                <div class="card-header" data-toggle="collapse" data-target="#faq4">
+                                    <h5 class="mb-0">How does the EOS tool integration work?</h5>
+                                </div>
+                                <div id="faq4" class="collapse" data-parent="#faqAccordion">
+                                    <div class="card-body">
+                                        Connect your clients' Ninety.io, Strety, EOS One, or Bloom Growth accounts. Their rocks, issues, to-dos, and scorecard data flows into your CRM automatically. One dashboard, all your clients.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card faq-card mb-3">
+                                <div class="card-header" data-toggle="collapse" data-target="#faq5">
+                                    <h5 class="mb-0">Can I track deals and revenue?</h5>
+                                </div>
+                                <div id="faq5" class="collapse" data-parent="#faqAccordion">
+                                    <div class="card-body">
+                                        Full pipeline management with customizable stages. Track deal value, probability, and expected close dates. See your revenue forecast at a glance.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card faq-card mb-3">
+                                <div class="card-header" data-toggle="collapse" data-target="#faq6">
+                                    <h5 class="mb-0">Is my data secure?</h5>
+                                </div>
+                                <div id="faq6" class="collapse" data-parent="#faqAccordion">
+                                    <div class="card-body">
+                                        Your data is encrypted at rest and in transit. We never share client information between EOS Implementers®. SOC 2 compliance is in progress.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section padding">
+            <div class="container">
+                <div class="cta-content text-center wow fadeInUp">
+                    <h2>Ready to simplify your practice management?</h2>
+                    <p>Join the waitlist for early access to the CRM built for EOS Implementers®.</p>
+                    <a href="#" class="default-btn open-modal">Get Early Access</a>
+                    <p class="mt-20"><a href="index.html" class="cta-demo-link">Learn more about Implementer.io</a></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer-section footer">
+            <div class="container">
+                <!-- Email Signup -->
+                <div class="row justify-content-center footer-signup">
+                    <div class="col-lg-6 text-center">
+                        <h3 class="text-white mb-sm">Get Early Access</h3>
+                        <p class="text-white-muted mb-lg">Be the first to know when we launch.</p>
+                        <form id="footer-signup-form" class="footer-form">
+                            <input type="email" name="email" required class="form-input" placeholder="Enter your email...">
+                            <button type="submit" class="default-btn">Join</button>
+                        </form>
+                        <p id="footer-success" class="form-success-text" style="display: none;">You're on the list!</p>
+                        <p id="footer-error" class="form-error-text" style="display: none;"></p>
+                    </div>
+                </div>
+
+                <!-- Product Definition -->
+                <div class="footer-disclaimer">
+                    <p><strong>What is Implementer.io?</strong> The only automated growth engine built for EOS Implementers®. 75,000+ companies running on EOS — 80% without an active implementer. We run your outreach, warm up leads, and hand them off ready to talk. Includes CRM with EOS tool integrations. Starting at $133/month billed annually.</p>
+                </div>
+
+                <!-- Trademark Disclaimer -->
+                <div class="footer-disclaimer">
+                    <p>EOS®, The Entrepreneurial Operating System®, and EOS Implementer® are trademarks of EOS Worldwide, LLC. <strong class="brand-name brand-name--white">Implementer<span class="accent">.io</span></strong> is an independent platform, not affiliated with or endorsed by EOS Worldwide. For official EOS resources, visit <a href="https://www.eosworldwide.com" class="text-primary" target="_blank" rel="noopener">eosworldwide.com</a>.</p>
+                </div>
+
+                <!-- Bottom Bar -->
+                <div class="text-center">
+                    <p class="text-white-faint mb-md">
+                        <a href="privacy.html" class="footer-link">Privacy Policy</a>
+                        <a href="terms.html" class="footer-link">Terms of Service</a>
+                    </p>
+                    <p class="text-white-faint mb-0">&copy; 2026 <strong class="brand-name brand-name--white">Implementer<span class="accent">.io</span></strong></p>
+                </div>
+            </div>
+        </footer>
+
+        <a data-scroll href="#header" id="scroll-to-top"><i class="arrow_carrot-up"></i></a>
+
+        <!-- Early Access Modal -->
+        <div id="early-access-modal" class="modal-overlay">
+            <div class="modal-content">
+                <button id="modal-close" class="modal-close">&times;</button>
+
+                <h3 class="modal-title">Get Early Access</h3>
+                <p class="modal-subtitle">Be the first to know when we launch.</p>
+
+                <form id="early-access-form">
+                    <input type="email" id="modal-email" name="email" required placeholder="Enter your email..." class="form-input">
+                    <button type="submit" class="default-btn modal-btn-full">Join the Waitlist</button>
+                </form>
+
+                <div id="form-success" class="form-success" style="display: none;">
+                    <i class="fas fa-check-circle text-primary modal-success-icon"></i>
+                    <h4 class="text-navy mb-sm modal-success-title">You're on the list!</h4>
+                    <p class="text-gray-dark mb-0">We'll be in touch soon.</p>
+                </div>
+
+                <div id="form-error" class="form-error" style="display: none;"></div>
+
+                <p class="text-gray modal-privacy">We respect your privacy. Unsubscribe anytime.</p>
+            </div>
+        </div>
+
+        <!-- Scripts -->
+        <script src="js/vendor/jquery-1.12.4.min.js"></script>
+        <script src="js/vendor/bootstrap.min.js"></script>
+        <script src="js/vendor/tether.min.js"></script>
+        <script src="js/vendor/jquery.slicknav.min.js"></script>
+        <script src="js/vendor/owl.carousel.min.js"></script>
+        <script src="js/vendor/smooth-scroll.min.js"></script>
+        <script src="js/vendor/jquery.counterup.min.js"></script>
+        <script src="js/vendor/jquery.waypoints.v2.0.3.min.js"></script>
+        <script src="js/vendor/wow.min.js"></script>
+        <script src="js/main.js"></script>
+
+        <!-- Modal JS -->
+        <script>
+        (function() {
+            const API_URL = '/api/signup';
+            const modal = document.getElementById('early-access-modal');
+            const modalClose = document.getElementById('modal-close');
+            const modalForm = document.getElementById('early-access-form');
+            const modalEmail = document.getElementById('modal-email');
+            const formSuccess = document.getElementById('form-success');
+            const formError = document.getElementById('form-error');
+            const footerForm = document.getElementById('footer-signup-form');
+            const footerSuccess = document.getElementById('footer-success');
+            const footerError = document.getElementById('footer-error');
+
+            document.querySelectorAll('.open-modal').forEach(function(btn) {
+                btn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    modal.style.display = 'flex';
+                    modalEmail.focus();
+                });
+            });
+
+            modalClose.addEventListener('click', function() {
+                closeModal();
+            });
+
+            modal.addEventListener('click', function(e) {
+                if (e.target === modal) {
+                    closeModal();
+                }
+            });
+
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && modal.style.display === 'flex') {
+                    closeModal();
+                }
+            });
+
+            function closeModal() {
+                modal.style.display = 'none';
+                modalForm.style.display = 'block';
+                formSuccess.style.display = 'none';
+                formError.style.display = 'none';
+                modalForm.reset();
+            }
+
+            modalForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                submitEmail({
+                    email: modalEmail.value,
+                    form: modalForm,
+                    successEl: formSuccess,
+                    errorEl: formError,
+                    onSuccess: function() { modalForm.style.display = 'none'; }
+                });
+            });
+
+            footerForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                submitEmail({
+                    email: footerForm.querySelector('input[name="email"]').value,
+                    form: footerForm,
+                    successEl: footerSuccess,
+                    errorEl: footerError,
+                    onSuccess: function() { footerForm.reset(); }
+                });
+            });
+
+            function submitEmail(options) {
+                var submitBtn = options.form.querySelector('button[type="submit"]');
+                var originalText = submitBtn.textContent;
+                submitBtn.textContent = 'Submitting...';
+                submitBtn.disabled = true;
+                options.errorEl.style.display = 'none';
+
+                fetch(API_URL, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ email: options.email })
+                })
+                .then(function(response) {
+                    return response.json().then(function(data) {
+                        return { ok: response.ok, data: data };
+                    });
+                })
+                .then(function(result) {
+                    if (result.ok) {
+                        options.onSuccess();
+                        options.successEl.style.display = 'block';
+                    } else {
+                        options.errorEl.textContent = result.data.error || 'Something went wrong. Please try again.';
+                        options.errorEl.style.display = 'block';
+                    }
+                })
+                .catch(function() {
+                    options.errorEl.textContent = 'Unable to connect. Please try again later.';
+                    options.errorEl.style.display = 'block';
+                })
+                .finally(function() {
+                    submitBtn.textContent = originalText;
+                    submitBtn.disabled = false;
+                });
+            }
+        })();
+        </script>
+
+    </body>
+</html>

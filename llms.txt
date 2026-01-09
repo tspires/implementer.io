@@ -1,20 +1,20 @@
 # Implementer.io
 
-> Implementer.io is a digital growth engine built specifically for EOS Implementers. It helps certified EOS Implementers find new clients, manage their practice, and grow their business.
+> The only automated growth engine built for EOS Implementers. 75,000+ companies running on EOS — 80% without an active implementer. We run your outreach, warm up leads, and hand them off ready to talk.
 
 ## What is Implementer.io?
 
 Implementer.io is a SaaS platform for EOS Implementers (consultants who help businesses implement the Entrepreneurial Operating System). The platform provides:
 
-1. **Lead Generation**: Access to a database of 50,000+ businesses running on EOS, with AI-powered signal detection that monitors LinkedIn, Twitter, forums, and other channels to identify companies that need EOS help.
+1. **Automated Outreach**: Multi-channel sequences (LinkedIn + email) that run while you sleep. Personalized messages, automatic follow-ups, and smart timing—all on autopilot.
 
-2. **Practice Management**: A unified dashboard that integrates with EOS tools (Ninety.io, Strety, EOS One, Bloom Growth) so implementers can see all their clients' rocks, issues, to-dos, and scorecards in one place.
+2. **Smart Prospecting**: Access to a database of 75,000+ businesses running on EOS — 80% without an active implementer. AI-powered signal detection monitors LinkedIn, Twitter, forums, and other channels to identify companies that need EOS help.
 
-3. **Client Health Monitoring**: AI-powered monitoring that flags warning signs in client data before they become problems.
+3. **Digital Brand Building**: Automated content posting builds your authority. Become the go-to EOS expert in your market without the daily grind.
 
-4. **Session Tools**: Automated session prep packets, recording/transcription with AI summaries, and action item extraction.
+4. **AI Sales Rep**: 24/7 lead capture on your website. Answers EOS questions, qualifies visitors, and books discovery calls automatically.
 
-5. **Business Operations**: Built-in CRM, invoicing, e-signatures, scheduling, and document management.
+5. **CRM Included**: Full CRM with EOS tool integrations (Ninety.io, Strety, EOS One, Bloom Growth). Manage contacts, deals, and client relationships in one place.
 
 ## Target Audience
 
@@ -24,11 +24,16 @@ Implementer.io is a SaaS platform for EOS Implementers (consultants who help bus
 
 ## Pricing
 
-Starting at $399/month. No annual contracts. Cancel anytime.
+- **Established**: $199/month ($133/month billed annually) - CRM + 25 leads/month
+- **Growth**: $399/month ($267/month billed annually) - Full automation + 100 leads/month + AI Sales Rep
+- **Premier**: $998/month ($665/month billed annually) - Software + done-for-you agency services
+
+Save 33% with annual billing. No cancellation fees. Cancel anytime.
 
 ## Key Differentiators
 
-- Only platform with a 50,000+ EOS business database
+- Only platform with a 75,000+ EOS business database (80% without an implementer)
+- Automated outreach runs while you focus on clients
 - Integrates with all major EOS tools (Ninety.io, Strety, EOS One, Bloom Growth)
 - Purpose-built for EOS Implementers, not a generic CRM
 - AI-powered lead scoring and signal detection
