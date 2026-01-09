@@ -4,22 +4,15 @@ const path = require('path');
 const db = require('./db');
 
 const env = process.env.NODE_ENV || 'development';
-const isSqlite = env === 'development';
 
 async function migrate() {
-  console.log(`Running migrations (${env} mode, ${isSqlite ? 'SQLite/Turso' : 'PostgreSQL'})...\n`);
+  console.log(`Running migrations (${env} mode, PostgreSQL)...\n`);
 
-  const migrationsTableSql = isSqlite
-    ? `CREATE TABLE IF NOT EXISTS migrations (
-        id INTEGER PRIMARY KEY AUTOINCREMENT,
-        name TEXT NOT NULL UNIQUE,
-        executed_at TEXT DEFAULT (datetime('now'))
-      )`
-    : `CREATE TABLE IF NOT EXISTS migrations (
-        id SERIAL PRIMARY KEY,
-        name VARCHAR(255) NOT NULL UNIQUE,
-        executed_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
-      )`;
+  const migrationsTableSql = `CREATE TABLE IF NOT EXISTS migrations (
+      id SERIAL PRIMARY KEY,
+      name VARCHAR(255) NOT NULL UNIQUE,
+      executed_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
+    )`;
 
   await db.execute(migrationsTableSql);
 
@@ -33,20 +26,12 @@ async function migrate() {
   const executedNames = new Set(executed.map(r => r.name));
 
   const migrationsDir = path.join(__dirname, 'migrations');
-  const suffix = isSqlite ? '.sqlite.sql' : '.sql';
-  const files = fs.readdirSync(migrationsDir)
-    .filter(f => f.endsWith(suffix) && !f.includes('.sqlite') === !isSqlite)
+  const migrationFiles = fs.readdirSync(migrationsDir)
+    .filter(f => f.endsWith('.sql') && !f.includes('.sqlite'))
     .sort();
 
-  const migrationFiles = isSqlite
-    ? fs.readdirSync(migrationsDir).filter(f => f.endsWith('.sqlite.sql')).sort()
-    : fs.readdirSync(migrationsDir).filter(f => f.endsWith('.sql') && !f.includes('.sqlite')).sort();
-
   for (const file of migrationFiles) {
-    const baseName = file.replace('.sqlite.sql', '.sql');
-    const trackingName = isSqlite ? baseName : file;
-
-    if (executedNames.has(trackingName)) {
+    if (executedNames.has(file)) {
       console.log(`  [skip] ${file} (already executed)`);
       continue;
     }
@@ -56,7 +41,7 @@ async function migrate() {
 
     try {
       await db.migrate(sql);
-      await db.query('INSERT INTO migrations (name) VALUES ($1)', [trackingName]);
+      await db.query('INSERT INTO migrations (name) VALUES ($1)', [file]);
       console.log(`         Done.`);
     } catch (err) {
       console.error(`         Error: ${err.message}`);

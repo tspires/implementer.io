@@ -4,10 +4,8 @@ let db;
 
 if (env === 'test') {
   db = require('./stub');
-} else if (env === 'production') {
-  db = require('./postgres');
 } else {
-  db = require('./turso');
+  db = require('./postgres');
 }
 
 module.exports = db;
