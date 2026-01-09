@@ -25,3 +25,7 @@ server/.env
 # Local SQLite database
 *.db
 server/*.db
+
+# Playwright
+server/test-results/
+server/playwright-report/
