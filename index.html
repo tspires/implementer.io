@@ -877,30 +877,39 @@
                 modalForm.reset();
             }
 
-            // Submit modal form
             modalForm.addEventListener('submit', function(e) {
                 e.preventDefault();
-                submitEmail(modalEmail.value, modalForm, formSuccess, formError, true);
+                submitEmail({
+                    email: modalEmail.value,
+                    form: modalForm,
+                    successEl: formSuccess,
+                    errorEl: formError,
+                    onSuccess: function() { modalForm.style.display = 'none'; }
+                });
             });
 
-            // Submit footer form
             footerForm.addEventListener('submit', function(e) {
                 e.preventDefault();
-                const email = footerForm.querySelector('input[name="email"]').value;
-                submitEmail(email, footerForm, footerSuccess, footerError, false);
+                submitEmail({
+                    email: footerForm.querySelector('input[name="email"]').value,
+                    form: footerForm,
+                    successEl: footerSuccess,
+                    errorEl: footerError,
+                    onSuccess: function() { footerForm.reset(); }
+                });
             });
 
-            function submitEmail(email, form, successEl, errorEl, isModal) {
-                const submitBtn = form.querySelector('button[type="submit"]');
-                const originalText = submitBtn.textContent;
+            function submitEmail(options) {
+                var submitBtn = options.form.querySelector('button[type="submit"]');
+                var originalText = submitBtn.textContent;
                 submitBtn.textContent = 'Submitting...';
                 submitBtn.disabled = true;
-                errorEl.style.display = 'none';
+                options.errorEl.style.display = 'none';
 
                 fetch(API_URL, {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ email: email })
+                    body: JSON.stringify({ email: options.email })
                 })
                 .then(function(response) {
                     return response.json().then(function(data) {
@@ -909,20 +918,16 @@
                 })
                 .then(function(result) {
                     if (result.ok) {
-                        if (isModal) {
-                            form.style.display = 'none';
-                        } else {
-                            form.reset();
-                        }
-                        successEl.style.display = 'block';
+                        options.onSuccess();
+                        options.successEl.style.display = 'block';
                     } else {
-                        errorEl.textContent = result.data.error || 'Something went wrong. Please try again.';
-                        errorEl.style.display = 'block';
+                        options.errorEl.textContent = result.data.error || 'Something went wrong. Please try again.';
+                        options.errorEl.style.display = 'block';
                     }
                 })
-                .catch(function(err) {
-                    errorEl.textContent = 'Unable to connect. Please try again later.';
-                    errorEl.style.display = 'block';
+                .catch(function() {
+                    options.errorEl.textContent = 'Unable to connect. Please try again later.';
+                    options.errorEl.style.display = 'block';
                 })
                 .finally(function() {
                     submitBtn.textContent = originalText;

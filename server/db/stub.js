@@ -12,6 +12,7 @@ module.exports = {
           email: params[0],
           ip_address: params[1],
           user_agent: params[2],
+          source: 'website',
           created_at: new Date().toISOString()
         });
       }
@@ -23,14 +24,6 @@ module.exports = {
     }
 
     return { rows: [], rowCount: 0 };
-  },
-
-  async execute(sql) {
-    return { rows: [], rowCount: 0 };
-  },
-
-  async migrate(sql) {
-    return;
   },
 
   _reset() {

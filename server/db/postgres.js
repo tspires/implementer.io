@@ -10,17 +10,6 @@ pool.on('error', (err) => {
 });
 
 module.exports = {
-  async query(sql, params = []) {
-    return pool.query(sql, params);
-  },
-
-  async execute(sql) {
-    return pool.query(sql);
-  },
-
-  async migrate(sql) {
-    await pool.query(sql);
-  },
-
+  query: (sql, params = []) => pool.query(sql, params),
   pool
 };

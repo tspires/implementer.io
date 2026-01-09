@@ -14,13 +14,14 @@ async function migrate() {
       executed_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
     )`;
 
-  await db.execute(migrationsTableSql);
+  await db.query(migrationsTableSql);
 
   let executed = [];
   try {
     const result = await db.query('SELECT name FROM migrations');
     executed = result.rows || [];
   } catch (err) {
+    console.warn('Could not read migrations table (may not exist yet):', err.message);
     executed = [];
   }
   const executedNames = new Set(executed.map(r => r.name));
@@ -40,7 +41,7 @@ async function migrate() {
     const sql = fs.readFileSync(path.join(migrationsDir, file), 'utf8');
 
     try {
-      await db.migrate(sql);
+      await db.query(sql);
       await db.query('INSERT INTO migrations (name) VALUES ($1)', [file]);
       console.log(`         Done.`);
     } catch (err) {
