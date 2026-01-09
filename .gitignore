@@ -21,3 +21,7 @@ node_modules/
 # Environment variables
 .env
 server/.env
+
+# Local SQLite database
+*.db
+server/*.db
